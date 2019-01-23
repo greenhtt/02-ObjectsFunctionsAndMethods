@@ -3,11 +3,11 @@ Practice DEFINING and CALLING
      FUNCTIONS
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Tierney Greenhoe.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   Allow this module to use the  rosegraphics.py  module by marking the
 #     src
 #   folder in this project as a "Sources Root", as follows:
@@ -25,10 +25,11 @@ def main():
     TESTS the functions that you will write below.
     You write the tests per the _TODO_s below.
     """
-
-
+    print(dingus(3,4))
+    money('red',10)
+    money('blue',15)
 ###############################################################################
-# TODO: 3a.  Define a function immediately below this _TODO_.
+# DONE: 3a.  Define a function immediately below this _TODO_.
 #   It takes two arguments that denote, for a right triangle,
 #   the lengths of the two sides adjacent to its right angle,
 #   and it returns the length of the hypotenuse of that triangle.
@@ -36,14 +37,16 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 3b.  In main, CALL your function and print the returned value,
+# DONE: 3b.  In main, CALL your function and print the returned value,
 #   to test whether you defined the function correctly.
 #
 ###############################################################################
-
+def dingus(side1,side2):
+    side3 = ((side1**2) + (side2**2))**0.5
+    return side3
 
 ###############################################################################
-# TODO: 4a.  Define a function immediately below this _TODO_.
+# DONE: 4a.  Define a function immediately below this _TODO_.
 #   It takes two arguments:
 #     -- a string that represents a color (e.g. 'red')
 #     -- a positive integer that represents the thickness of a Pen.
@@ -65,11 +68,21 @@ def main():
 #
 #   You may name the function and its parameters whatever you wish.
 #
-# TODO: 4b.  In main, CALL your function at least TWICE (with different values
+# DONE: 4b.  In main, CALL your function at least TWICE (with different values
 #   for the arguments) to test whether you defined the function correctly.
 #
 ###############################################################################
-
+def money(color,thickness):
+    window = rg.TurtleWindow()
+    cash = rg.SimpleTurtle()
+    cash.pen.color = 'green'
+    cash.pen.thickness = thickness
+    mulah = rg.SimpleTurtle()
+    mulah.pen.color = color
+    mulah.pen.thickness = 5
+    cash.forward(100)
+    mulah.backward(100)
+    window.close_on_mouse_click()
 
 ###############################################################################
 # TODO: 5.
